@@ -1,0 +1,12 @@
+R= 2.0 % Ohms
+L= 0.5 % Henrys
+K = .015 % torque constant
+Kb = .015 % emf constant
+b = 0.2 % Nms
+J= 0.02 % kg.m^2
+A = [0 1 0;0 -b/J K/J;0 -Kb/L -R/L]
+B = [0; 0;1/L];
+C = [1 0 0];
+D = [0];
+sys_servo = ss(A,B,C,D)
+sys_tf = tf(sys_servo)

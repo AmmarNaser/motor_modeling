@@ -1,0 +1,5 @@
+{
+    "sketch": "monitor_speed.ino",
+    "configuration": "cpu=atmega328",
+    "board": "arduino:avr:nano"
+}
